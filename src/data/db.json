@@ -1,0 +1,36 @@
+{
+  "tipos_documento": [
+    { "id": "memo", "nombre": "Memorándum" },
+    { "id": "oficio", "nombre": "Oficio" },
+    { "id": "citacion", "nombre": "Citación de Apoderados" },
+    { "id": "acuerdo", "nombre": "Acuerdo de Apoderados" },
+    { "id": "reunion_comunal", "nombre": "Reunión Comunal" },
+    { "id": "permiso_admin", "nombre": "Permiso Administrativo" }
+  ],
+  "documentos": [
+    {
+      "id": 1,
+      "titulo": "Memo N° 01/2026 - Planificación Año Escolar",
+      "tipo": "memo",
+      "fecha": "2026-03-02",
+      "referencia": "Dirección a Cuerpo Docente",
+      "descripcion": "Lineamientos generales y calendario de actividades para el primer semestre."
+    },
+    {
+      "id": 2,
+      "titulo": "Citación Apoderados 5° Básico",
+      "tipo": "citacion",
+      "fecha": "2026-03-15",
+      "referencia": "Profesor Jefe a Apoderados",
+      "descripcion": "Primera reunión informativa sobre rendimiento académico y convivencia."
+    },
+    {
+      "id": 3,
+      "titulo": "Oficio N° 12 - Solicitud de Materiales DAEM",
+      "tipo": "oficio",
+      "fecha": "2026-04-10",
+      "referencia": "DAEM María Pinto",
+      "descripcion": "Requerimiento de insumos tecnológicos para biblioteca y salas de clases."
+    }
+  ]
+}
