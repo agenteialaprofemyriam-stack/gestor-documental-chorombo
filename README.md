@@ -1,16 +1,48 @@
-# React + Vite
+# Sistema de Gestión Documental - Escuela Básica G-733 Chorombo Bajo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Institución:** Escuela Básica G-733 Chorombo Bajo, Comuna de María Pinto.  
+**Usuario Principal:** Equipo Directivo del establecimiento.  
+**Propósito:** Plataforma web Frontend centralizada para la administración, búsqueda, registro, edición y seguimiento de documentación interna institucional (Memos, Oficios, Citaciones y Acuerdos de Apoderados, Reuniones Comunales y Permisos Administrativos).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 1. Enlaces del Proyecto
 
-## React Compiler
+* **Repositorio en GitHub:** [https://github.com/agenteialaprofemyriam-stack/gestor-documental-chorombo](https://github.com/agenteialaprofemyriam-stack/gestor-documental-chorombo)
+* **Despliegue en Producción:** [https://gestor-documental-chorombo.vercel.app](https://gestor-documental-chorombo.vercel.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 2. Tecnologías y Justificación de la Arquitectura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Framework:** React 18+ estructurado sobre Vite.
+* **Estilos y UI:** Bootstrap 5.3 y Bootstrap Icons.
+* **Almacenamiento Local / Simulación:** Persistencia reactiva en `localStorage` sincronizada inicialmente con `db.json`.
+
+### Estructura de Directorios
+```text
+gestor-documental-chorombo/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── common/
+│   │   │   └── ConfirmModal.jsx       # Modal de confirmación para borrado seguro
+│   │   ├── documents/
+│   │   │   ├── DocumentDetail.jsx     # Ficha de visualización de documento
+│   │   │   ├── DocumentFilters.jsx    # Barra de búsqueda y selector por tipo
+│   │   │   ├── DocumentForm.jsx       # Formulario modal de creación y edición
+│   │   │   └── DocumentList.jsx       # Tabla responsiva y badges de estado
+│   │   └── layout/
+│   │       └── Navbar.jsx             # Barra superior institucional
+│   ├── data/
+│   │   └── db.json                    # Mock data inicial de tipos y documentos
+│   ├── services/
+│   │   └── documentService.js         # Capa de consumo de API y persistencia local
+│   ├── App.css
+│   ├── App.jsx                        # Orquestador del estado global y vistas modales
+│   ├── index.css
+│   └── main.jsx                       # Punto de entrada y montaje del DOM
+├── index.html
+├── package.json
+└── vite.config.js
